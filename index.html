@@ -1,161 +1,84 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eric Willian - Apresentação</title>
+    <title>Loja Online</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Cabeçalho -->
     <header>
         <div class="container">
-            <h1>Bem-vindo(a) ao meu site!</h1>
-            <p>Olá, eu sou Eric Willian. Conheça um pouco mais sobre mim.</p>
+            <h1>Bem-vindo à Loja Online</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Descrição e Foto -->
-    <section id="sobre-mim">
+    <section class="busca-produtos">
         <div class="container">
-            <div class="foto">
-                <img src="20240623_094600.jpg" alt="Eric Willian">
+            <input type="text" id="buscar" placeholder="Buscar por produto..." onkeyup="filtrarProdutos()">
+            <button onclick="calcularFrete()">Calcular Frete</button>
+        </div>
+    </section>
+
+    <section class="produtos">
+        <div class="container">
+            <div class="produto">
+                <h2>Produto A</h2>
+                <p class="descricao">Descrição do Produto A.</p>
+                <p class="preco">Preço: R$ 99,99</p>
+                <p class="frete">Frete: R$ 10,00</p>
             </div>
-            <div class="descricao">
-                <h2>Sobre mim</h2>
-                <p>Sou Eric Willian, estudante do Joao Pires de Camargo estou cursando o 2ºano do ensino medio tenho 17Anos e gosto de sempre aprender novas coisas sobre tecnologia e aprimorar meus conhecimentos.</p>
+
+            <div class="produto">
+                <h2>Produto B</h2>
+                <p class="descricao">Descrição do Produto B.</p>
+                <p class="preco">Preço: R$ 49,99</p>
+                <p class="frete">Frete: R$ 8,00</p>
+            </div>
+
+            <div class="produto">
+                <h2>Produto C</h2>
+                <p class="descricao">Descrição do Produto C.</p>
+                <p class="preco">Preço: R$ 150,00</p>
+                <p class="frete">Frete: R$ 20,00</p>
             </div>
         </div>
     </section>
 
-    <!-- Músicas -->
-    <section id="musicas">
-        <div class="container">
-            <h2>Minhas músicas favoritas</h2>
-            <ul>
-                <li><a href="https://youtu.be/145Qd0aVTEk?si=l9Ccc-ZhOblzKGfF" target="_blank">Eletrico-Light</a></li>
-                <li><a href="https://www.youtube.com/live/UOJ4V3DAAx8?si=V-MvmYiuMRRtBYbD" target="_blank">Sequencias de musicas Lofi</a></li>
-                <li><a href="https://youtu.be/D6Dxk49gWKY?si=MnyX1Pvpi7TlPaUq" target="_blank">Tango Balango</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Vídeos -->
-    <section class="categoria-videos">
-      <h2>Vídeos que Recomendo</h2>
-      <div class="video-card">
-        <a href="https://youtu.be/MLww8VIisKA?si=jdh1mrCs1Jz4rdse" target="_blank">
-          <img src="https://img.youtube.com/vi/MLww8VIisKA/0.jpg" alt="Vídeo 1">
-          <p></p>
-        </a>
-      </div>
-      <div class="video-card">
-        <a href="https://youtu.be/YzE3MBySy_s?si=8VqRVIwheWxz6wXP" target="_blank">
-          <img src="https://img.youtube.com/vi/YzE3MBySy_s/0.jpg" alt="Vídeo 2">
-          <p></p>
-        </a>
-      </div>
-      <div class="video-card">
-        <a href="https://youtu.be/yOHnl32X088?si=ZmW7yP7xYwdvqU9G" target="_blank">
-          <img src="https://img.youtube.com/vi/yOHnl32X088/0.jpg" alt="Vídeo 3">
-          <p></p>
-        </a>
-      </div>
-      <div class="video-card">
-        <a href="https://youtu.be/j36PVySAJi4?si=kW3TQWPSbV4xiu_4" target="_blank">
-          <img src="https://img.youtube.com/vi/j36PVySAJi4/0.jpg" alt="Vídeo 4">
-          <p></p>
-        </a>
-      </div>
-      <div class="video-card">
-        <a href="https://youtu.be/Y5mz0Hl9WHw?si=KvF-XvqG_ja9Pi6u" target="_blank">
-          <img src="https://img.youtube.com/vi/Y5mz0Hl9WHw/0.jpg" alt="Vídeo 5">
-          <p></p>
-        </a>
-      </div>
-        <div class="video-card">
-        <a href="https://youtu.be/vcNvag7C4aE?si=C33dqgAOONUL_FbQ" target="_blank">
-          <img src="https://img.youtube.com/vi/vcNvag7C4aE/0.jpg" alt="Vídeo 1">
-          <p></p>
-        </a>
-    </div>
-    <div class="video-card">
-        <a href="https://youtu.be/UZkrkCbz8Gk?si=srocBl0JkRL7Mg-D" target="_blank">
-          <img src="https://img.youtube.com/vi/UZkrkCbz8Gk/0.jpg" alt="Vídeo 2">
-          <p></p>
-        </a>
-    </div>
-    <div class="video-card">
-        <a href="https://youtu.be/rcWvPuIgAJE?si=jr7-q9hMtS6ZJ9JY" target="_blank">
-          <img src="https://img.youtube.com/vi/rcWvPuIgAJE/0.jpg" alt="Vídeo 3">
-          <p></p>
-        </a>
-    </div>
-    <div class="video-card">
-        <a href="https://youtu.be/-IduV5xz1XE?si=25UA-L4UMeaV5N-3" target="_blank">
-          <img src="https://img.youtube.com/vi/-IduV5xz1XE/0.jpg" alt="Vídeo 4">
-          <p></p>
-        </a>
-    </div>
-    <div class="video-card">
-        <a href="https://youtu.be/waaND_15RsI?si=aZBU7fCpSoC8BaTh" target="_blank">
-          <img src="https://img.youtube.com/vi/waaND_15RsI/0.jpg" alt="Vídeo 5">
-          <p></p>
-        </a>
-    </div>
-    <div class="video-card">
-        <a href="https://youtu.be/g3Vm2Z-MUkU?si=42MB2gnIE-yemOVe" target="_blank">
-          <img src="https://img.youtube.com/vi/g3Vm2Z-MUkU/0.jpg" alt="Vídeo 6">
-          <p></p>
-        </a>
-    </div>
-    <div class="video-card">
-        <a href="https://youtu.be/UPEz9-MM1HM?si=BfPk5sPyPCpqK0qf" target="_blank">
-          <img src="https://img.youtube.com/vi/UPEz9-MM1HM/0.jpg" alt="Vídeo 7">
-          <p></p>
-        </a>
-    </div>
-    <div class="video-card">
-        <a href="https://youtu.be/nJXzsHr3RDs?si=i3fDNwm7U2CI5KcZ" target="_blank">
-          <img src="https://img.youtube.com/vi/nJXzsHr3RDs/0.jpg" alt="Vídeo 8">
-          <p></p>
-        </a>
-    </div>
-    <div class="video-card">
-        <a href="https://youtu.be/C9IdMyuVrmM?si=6WJ1IfLqIVEFPa0_" target="_blank">
-          <img src="https://img.youtube.com/vi/C9IdMyuVrmM/0.jpg" alt="Vídeo 9">
-          <p></p>
-        </a>
-    </div>
-    <div class="video-card">
-        <a href="https://youtu.be/_kr9k-x-3ro?si=HZ6MNpC3s2E5sJGF" target="_blank">
-          <img src="https://img.youtube.com/vi/_kr9k-x-3ro/0.jpg" alt="Vídeo 10">
-          <p></p>
-        </a>
-    </div>
-  </section>
-    <!-- Links de Estudo -->
-    <section id="links-estudo">
-        <div class="container">
-            <h2>Links recomendados para estudo</h2>
-            <ul>
-                <li><a href="https://www.codecademy.com" target="_blank">Codecademy - Aprenda a programar</a></li>
-                <li><a href="https://www.khanacademy.org" target="_blank">Khan Academy - Cursos gratuitos</a></li>
-                <li><a href="https://www.coursera.org" target="_blank">Coursera - Cursos online</a></li>
-                <li><a href="https://www.udemy.com" target="_blank">Udemy - Cursos variados</a></li>
-                <li><a href="https://www.edx.org" target="_blank">edX - Cursos de universidades</a></li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Rodapé -->
     <footer>
         <div class="container">
-            <p>Agradeço ao Professor Hugo por todo o apoio e aprendizado.</p>
+            <p>&copy; 2024 Loja Online. Todos os direitos reservados.</p>
         </div>
     </footer>
 
+    <script>
+        // Função de filtro de produtos
+        function filtrarProdutos() {
+            var input = document.getElementById('buscar');
+            var filter = input.value.toUpperCase();
+            var produtos = document.querySelectorAll('.produto');
+
+            produtos.forEach(function(produto) {
+                var nomeProduto = produto.querySelector('h2').textContent;
+                if (nomeProduto.toUpperCase().indexOf(filter) > -1) {
+                    produto.style.display = "";
+                } else {
+                    produto.style.display = "none";
+                }
+            });
+        }
+
+        // Função para calcular frete (exemplo simplificado)
+        function calcularFrete() {
+            alert("Frete calculado com sucesso!");
+        }
+    </script>
 </body>
 </html>
-

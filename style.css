@@ -1,154 +1,112 @@
-/* Reset básico para garantir que a página tenha um visual consistente em diferentes navegadores */
+/* Resetando alguns estilos padrões */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background-color: black;
-    color: white;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Cabeçalho */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Estilos do cabeçalho */
 header {
-    background-color: rgb(97, 10, 97);
+    background-color: #333;
     color: white;
-    padding: 20px 0;
-    text-align: center;
+    padding: 10px 0;
 }
 
 header h1 {
-    font-size: 36px;
+    text-align: center;
 }
 
-header p {
-    font-size: 18px;
-}
-
-/* Seção "Sobre mim" */
-#sobre-mim {
+header nav ul {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 40px 0;
-}
-
-#sobre-mim .foto img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-
-#sobre-mim .descricao h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-#sobre-mim .descricao p {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* Seção de Músicas */
-#musicas {
-    background-color:rgb(97, 10, 97);
-    padding: 20px 0;
-}
-
-#musicas h2 {
-    text-align: center;
-    font-size: 60px;
-    margin-bottom: 30px;
-}
-
-#musicas ul {
     list-style: none;
-    padding-left: 0;
-    text-align: center;
 }
 
-#musicas li {
-    font-size: 18px;
-    margin-bottom: 10px;
+header nav ul li {
+    margin: 0 15px;
 }
 
-#musicas a {
-    text-decoration:rgb(97, 10, 97);
+header nav ul li a {
     color: white;
-    transition: color 0.3s;
-}
-
-#musicas a:hover {
-    color: #007BFF;
-}
-
-/* Seção de Vídeos */
-.categoria-videos {
-    display: flex;
-    overflow-x: auto;
-    gap: 30px;
-}
-
-.categoria {
-    padding: left 40px;
-    padding-right: 40px;
-    margin-top: 60px;
-}
-.categoria-videos img{
-    opacity: 0.5;
-    height: 400px;
-}
-.categoria-video img:hover {
-    opacity: 1.0;
-    border: 5px solid green;
-}
-
-
-/* Seção de Links de Estudo */
-#links-estudo {
-    background-color:rgb(97, 10, 97);
-    padding: 20px 0;
-}
-
-#links-estudo h2 {
-    text-align: center;
-    font-size: 45px;
-    margin-bottom: 40px;
-}
-
-#links-estudo ul {
-    list-style: none;
-    padding-left: 0;
-    text-align: center;
-}
-
-#links-estudo li {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-#links-estudo a {
     text-decoration: none;
-    color: white;
-    transition: color 0.3s;
+    font-weight: bold;
 }
 
-#links-estudo a:hover {
-    color: #007BFF;
-}
-
-/* Rodapé */
-footer {
-    background-color: black;
-    color: white;
+/* Estilos da busca */
+.busca-produtos {
+    background-color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
-footer p {
+.busca-produtos input {
+    padding: 10px;
     font-size: 16px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.busca-produtos button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.busca-produtos button:hover {
+    background-color: #218838;
+}
+
+/* Estilos dos produtos */
+.produtos {
+    padding: 30px 0;
+    background-color: #fff;
+}
+
+.produto {
+    background-color: #e9ecef;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.produto h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.produto .preco {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.produto .frete {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
