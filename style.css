@@ -41,8 +41,9 @@ body {
   
   /* Produtos */
   .produtos {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
     padding: 2rem;
     background-color: #f4f4f4;
   }
@@ -52,7 +53,6 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
-    width: 30%;
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
