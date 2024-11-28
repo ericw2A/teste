@@ -1,115 +1,82 @@
-/* Resetando alguns estilos padrões */
-* {
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-/* Estilos do cabeçalho */
-header {
-    background-color: #333;
+  }
+  
+  header {
+    background-color: #222;
     color: white;
-    padding: 10px 0;
-}
-
-header h1 {
+    padding: 1rem 0;
+  }
+  
+  header h1 {
     text-align: center;
-}
-
-header nav ul {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    list-style: none;
-}
-
-header nav ul li {
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
     margin: 0 15px;
-}
-
-header nav ul li a {
-    color: white;
+  }
+  
+  nav ul li a {
     text-decoration: none;
-    font-weight: bold;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Estilos da busca */
-.busca-produtos {
-    background-color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.busca-produtos input {
-    padding: 10px;
-    font-size: 16px;
-    width: 60%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.busca-produtos button {
-    padding: 10px 20px;
-    background-color: #28a745;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.busca-produtos button:hover {
-    background-color: #218838;
-}
-
-/* Estilos dos produtos */
-.produtos {
-    padding: 30px 0;
-    background-color: #fff;
-}
-
-.produto {
-    background-color: #e9ecef;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.produto h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.produto .preco {
     font-weight: bold;
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.produto .frete {
-    color: #28a745;
-    font-weight: bold;
-}
-
-/* Estilos do rodapé */
-footer {
-    background-color: #333;
+  }
+  
+  nav ul li a:hover {
+    color: #ccc;
+  }
+  
+  /* Produtos */
+  .produtos {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: #f4f4f4;
+  }
+  
+  .produto {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .produto:hover {
+    transform: translateY(-10px);
+  }
+  
+  .produto img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .produto h2 {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: #222;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    width: 100%;
-    bottom: 0;
-}
+    padding: 1rem 0;
+    margin-top: auto;
+  }

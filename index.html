@@ -1,106 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja Online</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nome da Loja</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Bem-vindo à Loja Online</h1>
-            <nav>
-                <ul>
-                    <li><a href="#" onclick="mostrarCategoria('todos')">Todos</a></li>
-                    <li><a href="#" onclick="mostrarCategoria('ebooks')">Livros Eletrônicos</a></li>
-                    <li><a href="#" onclick="mostrarCategoria('presentes')">Presentes</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+      <h1>Nome da loja</h1>
+      <nav>
+        <ul>
+          <li><a href="#livros">Livros</a></li>
+          <li><a href="#eletronicos">Eletrônicos</a></li>
+          <li><a href="#calcados">Calçados</a></li>
+          <li><a href="#presentes">Presentes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section class="busca-produtos">
-        <div class="container">
-            <input type="text" id="buscar" placeholder="Buscar por produto..." onkeyup="filtrarProdutos()">
-            <button onclick="calcularFrete()">Calcular Frete</button>
-        </div>
-    </section>
-
+  <main>
     <section class="produtos">
-        <div class="container" id="listaProdutos">
-            <!-- Produtos serão inseridos aqui dinamicamente -->
-        </div>
+      <div class="produto">
+        <img src="smartphone.jpg" alt="Smartphone">
+        <h2>Smartphone</h2>
+      </div>
+      <div class="produto">
+        <img src="console.jpg" alt="Console Futurista">
+        <h2>Console Futurista</h2>
+      </div>
+      <div class="produto">
+        <img src="tenis.jpg" alt="Tênis">
+        <h2>Tênis Moderno</h2>
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Loja Online. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Produtos simulados para cada categoria
-        const produtos = {
-            todos: [
-                { nome: "Produto A", descricao: "Descrição do Produto A", preco: 99.99, frete: 10.00, categoria: "ebooks" },
-                { nome: "Produto B", descricao: "Descrição do Produto B", preco: 49.99, frete: 8.00, categoria: "presentes" },
-                { nome: "Produto C", descricao: "Descrição do Produto C", preco: 150.00, frete: 20.00, categoria: "ebooks" },
-                { nome: "Produto D", descricao: "Descrição do Produto D", preco: 79.99, frete: 12.00, categoria: "presentes" }
-            ],
-            ebooks: [
-                { nome: "Livro Eletrônico A", descricao: "Livro de ficção científica", preco: 29.99, frete: 5.00, categoria: "ebooks" },
-                { nome: "Livro Eletrônico B", descricao: "Manual de programação", preco: 39.99, frete: 5.00, categoria: "ebooks" }
-            ],
-            presentes: [
-                { nome: "Caneca Personalizada", descricao: "Caneca com nome", preco: 39.99, frete: 8.00, categoria: "presentes" },
-                { nome: "Camiseta Estilosa", descricao: "Camiseta de algodão", preco: 59.99, frete: 10.00, categoria: "presentes" }
-            ]
-        };
-
-        // Função que exibe produtos com base na categoria selecionada
-        function mostrarCategoria(categoria) {
-            const listaProdutos = document.getElementById('listaProdutos');
-            listaProdutos.innerHTML = ''; // Limpar a lista de produtos
-
-            let produtosExibidos = categoria === 'todos' ? produtos.todos : produtos[categoria] || [];
-
-            produtosExibidos.forEach(produto => {
-                const divProduto = document.createElement('div');
-                divProduto.classList.add('produto');
-                divProduto.innerHTML = `
-                    <h2>${produto.nome}</h2>
-                    <p class="descricao">${produto.descricao}</p>
-                    <p class="preco">Preço: R$ ${produto.preco.toFixed(2)}</p>
-                    <p class="frete">Frete: R$ ${produto.frete.toFixed(2)}</p>
-                `;
-                listaProdutos.appendChild(divProduto);
-            });
-        }
-
-        // Função de filtro de produtos pela barra de pesquisa
-        function filtrarProdutos() {
-            const input = document.getElementById('buscar');
-            const filter = input.value.toUpperCase();
-            const produtosExibidos = document.querySelectorAll('.produto');
-
-            produtosExibidos.forEach(produto => {
-                const nomeProduto = produto.querySelector('h2').textContent;
-                if (nomeProduto.toUpperCase().indexOf(filter) > -1) {
-                    produto.style.display = "";
-                } else {
-                    produto.style.display = "none";
-                }
-            });
-        }
-
-        // Função para simulação de cálculo de frete
-        function calcularFrete() {
-            alert("Frete calculado com sucesso!");
-        }
-
-        // Carregar produtos iniciais
-        mostrarCategoria('todos');
-    </script>
+  <footer>
+    <p>© 2024 Nome da Loja. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
