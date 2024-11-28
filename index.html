@@ -1,116 +1,106 @@
-/* Resetando alguns estilos padrões */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Bem-vindo à Loja Online</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="mostrarCategoria('todos')">Todos</a></li>
+                    <li><a href="#" onclick="mostrarCategoria('ebooks')">Livros Eletrônicos</a></li>
+                    <li><a href="#" onclick="mostrarCategoria('presentes')">Presentes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
+    <section class="busca-produtos">
+        <div class="container">
+            <input type="text" id="buscar" placeholder="Buscar por produto..." onkeyup="filtrarProdutos()">
+            <button onclick="calcularFrete()">Calcular Frete</button>
+        </div>
+    </section>
 
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
+    <section class="produtos">
+        <div class="container" id="listaProdutos">
+            <!-- Produtos serão inseridos aqui dinamicamente -->
+        </div>
+    </section>
 
-/* Estilos do cabeçalho */
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-}
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Loja Online. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-header h1 {
-    text-align: center;
-}
+    <script>
+        // Produtos simulados para cada categoria
+        const produtos = {
+            todos: [
+                { nome: "Produto A", descricao: "Descrição do Produto A", preco: 99.99, frete: 10.00, categoria: "ebooks" },
+                { nome: "Produto B", descricao: "Descrição do Produto B", preco: 49.99, frete: 8.00, categoria: "presentes" },
+                { nome: "Produto C", descricao: "Descrição do Produto C", preco: 150.00, frete: 20.00, categoria: "ebooks" },
+                { nome: "Produto D", descricao: "Descrição do Produto D", preco: 79.99, frete: 12.00, categoria: "presentes" }
+            ],
+            ebooks: [
+                { nome: "Livro Eletrônico A", descricao: "Livro de ficção científica", preco: 29.99, frete: 5.00, categoria: "ebooks" },
+                { nome: "Livro Eletrônico B", descricao: "Manual de programação", preco: 39.99, frete: 5.00, categoria: "ebooks" }
+            ],
+            presentes: [
+                { nome: "Caneca Personalizada", descricao: "Caneca com nome", preco: 39.99, frete: 8.00, categoria: "presentes" },
+                { nome: "Camiseta Estilosa", descricao: "Camiseta de algodão", preco: 59.99, frete: 10.00, categoria: "presentes" }
+            ]
+        };
 
-header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
+        // Função que exibe produtos com base na categoria selecionada
+        function mostrarCategoria(categoria) {
+            const listaProdutos = document.getElementById('listaProdutos');
+            listaProdutos.innerHTML = ''; // Limpar a lista de produtos
 
-header nav ul li {
-    margin: 0 15px;
-}
+            let produtosExibidos = categoria === 'todos' ? produtos.todos : produtos[categoria] || [];
 
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+            produtosExibidos.forEach(produto => {
+                const divProduto = document.createElement('div');
+                divProduto.classList.add('produto');
+                divProduto.innerHTML = `
+                    <h2>${produto.nome}</h2>
+                    <p class="descricao">${produto.descricao}</p>
+                    <p class="preco">Preço: R$ ${produto.preco.toFixed(2)}</p>
+                    <p class="frete">Frete: R$ ${produto.frete.toFixed(2)}</p>
+                `;
+                listaProdutos.appendChild(divProduto);
+            });
+        }
 
-header nav ul li a:hover {
-    text-decoration: underline;
-}
+        // Função de filtro de produtos pela barra de pesquisa
+        function filtrarProdutos() {
+            const input = document.getElementById('buscar');
+            const filter = input.value.toUpperCase();
+            const produtosExibidos = document.querySelectorAll('.produto');
 
-/* Estilos da busca */
-.busca-produtos {
-    background-color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
+            produtosExibidos.forEach(produto => {
+                const nomeProduto = produto.querySelector('h2').textContent;
+                if (nomeProduto.toUpperCase().indexOf(filter) > -1) {
+                    produto.style.display = "";
+                } else {
+                    produto.style.display = "none";
+                }
+            });
+        }
 
-.busca-produtos input {
-    padding: 10px;
-    font-size: 16px;
-    width: 60%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+        // Função para simulação de cálculo de frete
+        function calcularFrete() {
+            alert("Frete calculado com sucesso!");
+        }
 
-.busca-produtos button {
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.busca-produtos button:hover {
-    background-color: #218838;
-}
-
-/* Estilos dos produtos */
-.produtos {
-    padding: 30px 0;
-    background-color: #fff;
-}
-
-.produto {
-    background-color: #e9ecef;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.produto h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.produto .preco {
-    font-weight: bold;
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.produto .frete {
-    color: #28a745;
-    font-weight: bold;
-}
-
-/* Estilos do rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+        // Carregar produtos iniciais
+        mostrarCategoria('todos');
+    </script>
+</body>
+</html>
