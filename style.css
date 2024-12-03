@@ -77,7 +77,42 @@ nav ul li a:hover {
   color: #e74c3c;
   font-weight: bold;
   margin-top: 0.5rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+.botoes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.adicionar {
+  background-color: #3498db;
+  color: white;
+}
+
+.adicionar:hover {
+  background-color: #2980b9;
+  transform: translateY(-5px);
+}
+
+.comprar {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.comprar:hover {
+  background-color: #c0392b;
+  transform: translateY(-5px);
 }
 
 /* Rodapé */
