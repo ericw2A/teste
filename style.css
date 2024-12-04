@@ -43,10 +43,13 @@ body {
   }
   
   /* Títulos das Seções */
-  h2 {
-    text-align: center;
-    margin: 2rem 0 1rem;
-    color: #333;
+  /* Títulos das Seções */
+h2 {
+    margin: 1rem 0; /* Espaçamento superior e inferior */
+    padding-left: 2rem; /* Indentação do título */
+    color: #333; /* Cor do texto */
+    font-size: 1.5rem; /* Tamanho do título */
+    text-align: left; /* Alinha o título à esquerda */
   }
   
   /* Produtos */
