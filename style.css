@@ -1,23 +1,22 @@
 /* Estilos Gerais */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f9f9f9;
+    line-height: 1.6;
+    background-color: #f4f4f4;
   }
   
   header {
-    background: linear-gradient(90deg, #ff7f50, #ff4500);
+    background-color: #222;
     color: white;
-    padding: 1.5rem 0;
-    text-align: center;
+    padding: 1rem 0;
   }
   
   header h1 {
+    text-align: center;
     margin: 0;
-    font-size: 2rem;
-    letter-spacing: 2px;
   }
   
   nav ul {
@@ -36,62 +35,59 @@ body {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+    transition: color 0.3s ease;
   }
   
   nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.3);
+    color: #ccc;
+  }
+  
+  /* Títulos das Seções */
+  h2 {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    color: #333;
   }
   
   /* Produtos */
   .produtos {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
-  }
-  
-  .produtos h2 {
-    grid-column: 1/-1;
-    font-size: 2rem;
-    color: #333;
-    text-align: center;
-    margin-bottom: 1rem;
+    padding: 2rem;
+    background-color: #fff;
   }
   
   .produto {
     background: white;
-    border-radius: 10px;
-    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .produto:hover {
     transform: translateY(-10px);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
   }
   
   .produto img {
     max-width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
   }
   
   .produto h3 {
     font-size: 1.2rem;
     margin: 0.5rem 0;
+    color: #333;
   }
   
   .preco {
-    color: #ff4500;
+    font-size: 1.1rem;
+    color: #e74c3c;
     font-weight: bold;
-    font-size: 1.3rem;
     margin: 0.5rem 0 1rem;
   }
   
@@ -102,42 +98,56 @@ body {
   }
   
   .btn {
-    border: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
     font-size: 1rem;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .btn:hover {
-    transform: translateY(-5px);
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
   .adicionar {
-    background: #3498db;
+    background-color: #3498db;
     color: white;
   }
   
   .adicionar:hover {
-    background: #2980b9;
+    background-color: #2980b9;
+    transform: translateY(-5px);
   }
   
   .comprar {
-    background: #e74c3c;
+    background-color: #e74c3c;
     color: white;
   }
   
   .comprar:hover {
-    background: #c0392b;
+    background-color: #c0392b;
+    transform: translateY(-5px);
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    .produtos {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
   }
   
   /* Rodapé */
   footer {
-    background: #222;
+    background-color: #222;
     color: white;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1rem 0;
+    margin-top: auto;
   }
   
