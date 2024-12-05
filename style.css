@@ -1,63 +1,239 @@
-/* Reset básico */
+/* Reset de Estilos Padrão */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Corpo do site */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 /* Cabeçalho */
 header {
-  background-color: #0077cc;
+  background: #1e3c72; /* Azul Escuro */
   color: white;
-  padding: 1rem;
+  padding: 1.5rem 0;
+  text-align: center;
+  position: relative;
 }
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-header nav ul {
-  display: flex;
+nav ul {
   list-style: none;
-}
-
-header nav ul li {
-  margin-left: 1rem;
-}
-
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-/* Produtos */
-.produtos {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 1rem 0;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
-.produtos::-webkit-scrollbar {
-  height: 8px;
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
 }
 
-.produtos::-webkit-scrollbar-thumb {
-  background: #0077cc;
-  border-radius: 10px;
+nav ul li a:hover {
+  background-color: #ff7f50; /* Laranja */
+}
+
+.search-bar {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-bar input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  width: 200px;
+}
+
+.search-bar button {
+  padding: 0.5rem;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* Banner Promocional */
+.banner {
+  background: #3498db; /* Azul Claro */
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.banner .btn {
+  background-color: #ff7f50;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.banner .btn:hover {
+  background-color: #e67e22; /* Laranja mais escuro */
+}
+
+/* Seções de Produtos */
+.produtos-secao {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.produtos-secao h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
 }
 
 .produto {
-  flex: 0 0 300px;
   background: white;
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
   text-align: center;
+}
+
+.produto img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.produto h3 {
+  font-size: 1.3rem;
+  margin: 1rem 0;
+}
+
+.preco {
+  color: #ff7f50; /* Laranja */
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.produto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.produto button {
+  background-color: #3498db; /* Azul Claro */
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.produto button:hover {
+  background-color: #2980b9; /* Azul mais escuro */
+}
+
+/* Seção de Contato */
+.contato {
+  padding: 3rem 1rem;
+  background-color: #ecf0f1;
+}
+
+.contato h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contato p {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contato form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contato form input,
+.contato form textarea {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contato form button {
+  padding: 1rem 2rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contato form button:hover {
+  background-color: #2980b9;
+}
+
+/* Rodapé */
+footer {
+  background-color: #1e3c72;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+}
+
+footer p {
+  font-size: 1rem;
 }
