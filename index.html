@@ -18,8 +18,8 @@
         </ul>
       </nav>
       <div class="search-bar">
-        <input type="text" id="search" placeholder="Buscar produtos...">
-        <button onclick="buscarProduto()">🔍</button>
+        <input type="text" placeholder="Buscar produtos...">
+        <button>Buscar</button>
       </div>
     </div>
   </header>
@@ -73,15 +73,6 @@
           <button class="btn comprar">Comprar</button>
         </div>
       </div>
-      <div class="produto">
-        <img src="fone.jpg" alt="Fones de Ouvido">
-        <h3>Fones de Ouvido Bluetooth</h3>
-        <p class="preco">R$ 399,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
-      </div>
     </section>
 
     <!-- Seção de Calçados -->
@@ -107,7 +98,7 @@
       </div>
       <div class="produto">
         <img src="assuna.jpg" alt="Sandália Adidas">
-        <h3>Assuna Preto</h3>
+        <h3>Assuna preto</h3>
         <p class="preco">R$ 149,00</p>
         <div class="botoes">
           <button class="btn adicionar">Adicionar ao Carrinho</button>
@@ -115,68 +106,9 @@
         </div>
       </div>
       <div class="produto">
-        <img src="air.jpg" alt="Bota Timberland">
-        <h3>Air Max 97 Branco</h3>
-        <p class="preco">R$ 699,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
-      </div>
-      <div class="produto">
         <img src="mizuno.jpg" alt="Tênis Puma">
-        <h3>Mizuno Areia</h3>
+        <h3>Mizuno areia</h3>
         <p class="preco">R$ 549,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
-      </div>
-      <div class="produto">
-        <img src="chinelo.jpg" alt="Chinelo Havaianas">
-        <h3>Chinelo Havaianas</h3>
-        <p class="preco">R$ 69,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção de Roupas -->
-    <section id="roupas" class="produtos">
-      <h2>Roupas</h2>
-      <div class="produto">
-        <img src="camisa1.jpg" alt="Camiseta Nike Branca">
-        <h3>Camiseta Nike Branca</h3>
-        <p class="preco">R$ 129,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
-      </div>
-      <div class="produto">
-        <img src="calça.jpg" alt="Calça Nike Preta">
-        <h3>Calça Nike Preta</h3>
-        <p class="preco">R$ 249,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
-      </div>
-      <div class="produto">
-        <img src="shot.jpg" alt="Shorts Nike Preto">
-        <h3>Shorts Nike Preto</h3>
-        <p class="preco">R$ 179,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
-      </div>
-      <div class="produto">
-        <img src="jaqueta.jpg" alt="Jaqueta de Couro">
-        <h3>Jaqueta de Couro</h3>
-        <p class="preco">R$ 599,00</p>
         <div class="botoes">
           <button class="btn adicionar">Adicionar ao Carrinho</button>
           <button class="btn comprar">Comprar</button>
@@ -184,21 +116,6 @@
       </div>
     </section>
   </main>
-
-  <footer>
-    <p>© 2024 Tem de Tudo - Todos os direitos reservados.</p>
-  </footer>
-
-  <script>
-    function buscarProduto() {
-      const query = document.getElementById("search").value.toLowerCase();
-      const produtos = document.querySelectorAll(".produto");
-
-      produtos.forEach(produto => {
-        const nome = produto.querySelector("h3").textContent.toLowerCase();
-        produto.style.display = nome.includes(query) ? "block" : "none";
-      });
-    }
-  </script>
 </body>
 </html>
+
