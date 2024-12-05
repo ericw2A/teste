@@ -3,10 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tem de Tudo</title>
+  <meta name="description" content="Tem de Tudo - Loja online com os melhores produtos em eletrônicos, calçados e roupas.">
+  <meta name="keywords" content="eletrônicos, calçados, roupas, loja online, compras">
+  <meta name="author" content="Tem de Tudo">
+  <title>Tem de Tudo - Loja Online</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Cabeçalho -->
   <header>
     <div class="container">
       <h1>Tem de Tudo</h1>
@@ -15,107 +19,119 @@
           <li><a href="#eletronicos">Eletrônicos</a></li>
           <li><a href="#calcados">Calçados</a></li>
           <li><a href="#roupas">Roupas</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
       <div class="search-bar">
         <input type="text" placeholder="Buscar produtos...">
-        <button>Buscar</button>
+        <button>🔍</button>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- Seção de Eletrônicos -->
-    <section id="eletronicos" class="produtos">
-      <h2>Eletrônicos</h2>
+  <!-- Banner Promocional -->
+  <section class="banner">
+    <h2>Bem-vindo à Tem de Tudo!</h2>
+    <p>Confira nossas promoções e encontre os melhores produtos.</p>
+    <a href="#eletronicos" class="btn">Ver Produtos</a>
+  </section>
+
+  <!-- Seção de Eletrônicos -->
+  <section id="eletronicos" class="produtos-secao">
+    <h2>Eletrônicos</h2>
+    <div class="produtos">
       <div class="produto">
-        <img src="s24.jpg" alt="Smartphone">
+        <img src="s24.jpg" alt="Smartphone S24 Ultra">
         <h3>S24 Ultra</h3>
         <p class="preco">R$ 5.299,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
+        <button class="btn comprar">Comprar</button>
       </div>
       <div class="produto">
         <img src="nintendo.jpg" alt="Nintendo Switch">
         <h3>Nintendo Switch</h3>
         <p class="preco">R$ 2.499,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
+        <button class="btn comprar">Comprar</button>
       </div>
       <div class="produto">
         <img src="mac.jpg" alt="Macbook Pro">
         <h3>Macbook Pro</h3>
         <p class="preco">R$ 12.499,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
+        <button class="btn comprar">Comprar</button>
       </div>
       <div class="produto">
         <img src="tv1.jpg" alt="Smart TV 4K">
         <h3>Smart TV 4K 55”</h3>
         <p class="preco">R$ 3.499,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
+        <button class="btn comprar">Comprar</button>
       </div>
-      <div class="produto">
-        <img src="tablet.jpg" alt="Tablet Galaxy">
-        <h3>Tablet Galaxy Tab S8</h3>
-        <p class="preco">R$ 2.199,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Seção de Calçados -->
-    <section id="calcados" class="produtos">
-      <h2>Calçados</h2>
+  <!-- Seção de Calçados -->
+  <section id="calcados" class="produtos-secao">
+    <h2>Calçados</h2>
+    <div class="produtos">
       <div class="produto">
         <img src="tn3.jpg" alt="Tênis Nike Air Max">
         <h3>Nike Air Max Plus</h3>
         <p class="preco">R$ 799,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
+        <button class="btn comprar">Comprar</button>
       </div>
       <div class="produto">
         <img src="tn2.jpg" alt="Tênis Nike TN Plus">
         <h3>Nike Air Max TN Plus</h3>
         <p class="preco">R$ 999,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
+        <button class="btn comprar">Comprar</button>
       </div>
       <div class="produto">
-        <img src="assuna.jpg" alt="Sandália Adidas">
-        <h3>Assuna preto</h3>
+        <img src="assuna.jpg" alt="Sandália Assuna">
+        <h3>Assuna Preto</h3>
         <p class="preco">R$ 149,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
+        <button class="btn comprar">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de Roupas -->
+  <section id="roupas" class="produtos-secao">
+    <h2>Roupas</h2>
+    <div class="produtos">
+      <div class="produto">
+        <img src="camisa1.jpg" alt="Camisa Social Masculina">
+        <h3>Camisa Social</h3>
+        <p class="preco">R$ 119,00</p>
+        <button class="btn comprar">Comprar</button>
       </div>
       <div class="produto">
-        <img src="mizuno.jpg" alt="Tênis Puma">
-        <h3>Mizuno areia</h3>
-        <p class="preco">R$ 549,00</p>
-        <div class="botoes">
-          <button class="btn adicionar">Adicionar ao Carrinho</button>
-          <button class="btn comprar">Comprar</button>
-        </div>
+        <img src="jaqueta.jpg" alt="Jaqueta de Couro">
+        <h3>Jaqueta de Couro</h3>
+        <p class="preco">R$ 299,00</p>
+        <button class="btn comprar">Comprar</button>
       </div>
-    </section>
-  </main>
+      <div class="produto">
+        <img src="vestido.jpg" alt="Vestido Elegante">
+        <h3>Vestido Elegante</h3>
+        <p class="preco">R$ 159,00</p>
+        <button class="btn comprar">Comprar</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contato">
+    <h2>Entre em Contato</h2>
+    <p>Quer saber mais sobre nossos produtos? Envie uma mensagem!</p>
+    <form>
+      <input type="text" placeholder="Seu Nome" required>
+      <input type="email" placeholder="Seu E-mail" required>
+      <textarea placeholder="Sua Mensagem" rows="4" required></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2024 Tem de Tudo. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
-
