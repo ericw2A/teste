@@ -22,10 +22,6 @@
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
-      <div class="search-bar">
-        <input type="text" placeholder="Buscar produtos...">
-        <button>🔍</button>
-      </div>
     </div>
   </header>
 
@@ -44,25 +40,31 @@
         <img src="s24.jpg" alt="Smartphone S24 Ultra">
         <h3>S24 Ultra</h3>
         <p class="preco">R$ 5.299,00</p>
-        <button class="btn comprar">Comprar</button>
+        <button class="btn comprar" data-produto="S24 Ultra">Comprar</button>
       </div>
       <div class="produto">
         <img src="nintendo.jpg" alt="Nintendo Switch">
         <h3>Nintendo Switch</h3>
         <p class="preco">R$ 2.499,00</p>
-        <button class="btn comprar">Comprar</button>
+        <button class="btn comprar" data-produto="Nintendo Switch">Comprar</button>
       </div>
       <div class="produto">
         <img src="mac.jpg" alt="Macbook Pro">
         <h3>Macbook Pro</h3>
         <p class="preco">R$ 12.499,00</p>
-        <button class="btn comprar">Comprar</button>
+        <button class="btn comprar" data-produto="Macbook Pro">Comprar</button>
       </div>
       <div class="produto">
         <img src="tv1.jpg" alt="Smart TV 4K">
         <h3>Smart TV 4K 55”</h3>
         <p class="preco">R$ 3.499,00</p>
-        <button class="btn comprar">Comprar</button>
+        <button class="btn comprar" data-produto="Smart TV 4K 55”">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="a73.jpg" alt="Smartphone A73 5G">
+        <h3>A73 5G</h3>
+        <p class="preco">R$ 4.499,00</p>
+        <button class="btn comprar" data-produto="A73 5G">Comprar</button>
       </div>
     </div>
   </section>
@@ -75,19 +77,31 @@
         <img src="tn3.jpg" alt="Tênis Nike Air Max">
         <h3>Nike Air Max Plus</h3>
         <p class="preco">R$ 799,00</p>
-        <button class="btn comprar">Comprar</button>
+        <button class="btn comprar" data-produto="Nike Air Max Plus">Comprar</button>
       </div>
       <div class="produto">
         <img src="tn2.jpg" alt="Tênis Nike TN Plus">
         <h3>Nike Air Max TN Plus</h3>
         <p class="preco">R$ 999,00</p>
-        <button class="btn comprar">Comprar</button>
+        <button class="btn comprar" data-produto="Nike Air Max TN Plus">Comprar</button>
       </div>
       <div class="produto">
         <img src="assuna.jpg" alt="Sandália Assuna">
         <h3>Assuna Preto</h3>
         <p class="preco">R$ 149,00</p>
-        <button class="btn comprar">Comprar</button>
+        <button class="btn comprar" data-produto="Assuna Preto">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="mizuno.jpg" alt="Tênis Mizuno Branco">
+        <h3>Mizuno Branco</h3>
+        <p class="preco">R$ 1.799,00</p>
+        <button class="btn comprar" data-produto="Mizuno Branco">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="air.jpg" alt="Tênis Nike Air Max 97">
+        <h3>Air Max 97 Branco</h3>
+        <p class="preco">R$ 599,00</p>
+        <button class="btn comprar" data-produto="Air Max 97 Branco">Comprar</button>
       </div>
     </div>
   </section>
@@ -100,19 +114,31 @@
         <img src="camisa1.jpg" alt="Camisa Social Masculina">
         <h3>Camisa Social</h3>
         <p class="preco">R$ 119,00</p>
-        <button class="btn comprar">Comprar</button>
+        <button class="btn comprar" data-produto="Camisa Social">Comprar</button>
       </div>
       <div class="produto">
-        <img src="jaqueta.jpg" alt="Jaqueta de Couro">
+        <img src="polo5.jpg" alt="Jaqueta de Couro">
         <h3>Jaqueta de Couro</h3>
         <p class="preco">R$ 299,00</p>
-        <button class="btn comprar">Comprar</button>
+        <button class="btn comprar" data-produto="Jaqueta de Couro">Comprar</button>
       </div>
       <div class="produto">
-        <img src="vestido.jpg" alt="Vestido Elegante">
+        <img src="nike5.jpg" alt="Vestido Elegante">
         <h3>Vestido Elegante</h3>
         <p class="preco">R$ 159,00</p>
-        <button class="btn comprar">Comprar</button>
+        <button class="btn comprar" data-produto="Vestido Elegante">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="shot.jpg" alt="Shorts Nike Preto">
+        <h3>Shorts Nike Preto</h3>
+        <p class="preco">R$ 250,00</p>
+        <button class="btn comprar" data-produto="Shorts Nike Preto">Comprar</button>
+      </div>
+      <div class="produto">
+        <img src="calça.jpg" alt="Calça Nike Preta">
+        <h3>Calça Preta Nike</h3>
+        <p class="preco">R$ 199,99</p>
+        <button class="btn comprar" data-produto="Calça Preta Nike">Comprar</button>
       </div>
     </div>
   </section>
@@ -133,5 +159,22 @@
   <footer>
     <p>&copy; 2024 Tem de Tudo. Todos os direitos reservados.</p>
   </footer>
+
+  <!-- Script para funcionalidade do botão Comprar -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const carrinho = [];
+      const botaoComprar = document.querySelectorAll('.btn.comprar');
+
+      botaoComprar.forEach(botao => {
+        botao.addEventListener('click', () => {
+          const produto = botao.getAttribute('data-produto');
+          carrinho.push(produto);
+          alert(`${produto} foi adicionado ao carrinho!`);
+          console.log('Carrinho:', carrinho); // Exibe o carrinho no console
+        });
+      });
+    });
+  </script>
 </body>
 </html>
